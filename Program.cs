@@ -1,4 +1,4 @@
-﻿
+﻿//By Silktz
 Random random = new Random();
 int numaleatorio = random.Next(1, 101);
 int resposta = 1;   
@@ -26,43 +26,43 @@ while(resposta != numaleatorio)
             {
             if (tente > 7)
             {
-                corzinha("A quantidade de tentativas maxima foi alcançada...", ConsoleColor.Red);
+                corzinha("A quantidade de tentativas maxima foi alcançada...", ConsoleColor.DarkRed);
                 return;
             }
             
             else if (distancia <= 3 && distancia >= 1)
             {
                 corzinha("Está PELANDO, o número escrito está bem próximo ", ConsoleColor.DarkYellow);
-                corzinha("Digite outro número..", ConsoleColor.DarkMagenta);
+                corzinha("Digite outro número..", ConsoleColor.DarkCyan);
             }
             else if (distancia <= 10 && distancia > 3)
             {
                 corzinha("Você está QUENTE, continue tentando!..", ConsoleColor.Yellow);
-                corzinha("Digite outro número..", ConsoleColor.DarkMagenta);
+                corzinha("Digite outro número..", ConsoleColor.DarkCyan);
             }
             else if (distancia <= 30 && distancia > 10)
             {
                 corzinha("Você está FRIO, tente outro número..", ConsoleColor.DarkBlue);
                 distancia2();
-                corzinha("Digite outro número..", ConsoleColor.DarkMagenta);
+                corzinha("Digite outro número..", ConsoleColor.DarkCyan);
             }
             else if (distancia > 30)
             {
                 corzinha("Você está CONGELANDO, o número digitado está longe do que eu pensei!", ConsoleColor.Blue);
                 distancia2();
-                corzinha("Digite outro número..", ConsoleColor.DarkMagenta);
+                corzinha("Digite outro número..", ConsoleColor.DarkCyan);
             }
             }
 
             else
             {
-                corzinha("Digite um valor entre 1 a 100.. ", ConsoleColor.Red);
+                corzinha("Digite um valor entre 1 a 100.. ", ConsoleColor.Blue);
                 return;
             }
     }
         
 Console.ForegroundColor = ConsoleColor.DarkGreen;
-Console.WriteLine($"Parabéns, você acertou o número aleatório! O número era ({numaleatorio}), a quantidade de tentativas foram de ({tente}).");
+mensagem($"Parabéns, você acertou o número aleatório! O número era ({numaleatorio}), a quantidade de tentativas foram de ({tente}).");
 Console.ResetColor();
 
 void corzinha(string mensagem, ConsoleColor corMensagem)
